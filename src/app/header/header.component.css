@@ -1,0 +1,25 @@
+
+.header-container {
+  background-color: burlywood;
+  padding: 15px 0;
+}
+
+.menu-items {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: center;
+  justify-content: center;
+  list-style-type: none !important;
+  margin: 0;
+}
+
+.menu-items li {
+  padding: 0 10px;
+}
+
+.menu-items li a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  font-family: PoppinsLight;
+}
