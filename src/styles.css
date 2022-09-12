@@ -21,5 +21,13 @@
   src: url("./assets/fonts/Poppins-Bold.ttf") format("truetype");
 }
 
-html, body { height: 100%; }
-body { margin: 0; font-family: "PoppinsRegular"; }
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: "PoppinsRegular";
+  /* min-height: 100vh; */
+  background: #e2e2e2;
+}

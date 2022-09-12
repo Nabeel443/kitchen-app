@@ -1,0 +1,34 @@
+<div class="row">
+  <div class="col-md-4"></div>
+  <div class="col-md-4">
+    <form [formGroup]="loginForm" (ngSubmit)="onSignIn()" class="login-form">
+      <mat-form-field class="full-width-field" appearance="fill">
+        <mat-label>Email</mat-label>
+        <input type="email"
+          matInput
+          placeholder="Enter email..."
+          formControlName="email"
+        >
+        <mat-error *ngIf="loginForm.value.email.errors?.['required']">
+          Email is required.
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field class="full-width-field" appearance="fill">
+        <mat-label>Password</mat-label>
+        <input type="password"
+          matInput
+          placeholder="Enter password..."
+          formControlName="password"
+        >
+        <mat-error *ngIf="loginForm.value.password.errors?.['required']">
+          Password is required.
+        </mat-error>
+      </mat-form-field>
+      <button mat-raised-button color="primary">Login</button>
+    </form>
+    <div *ngIf="alertMessage" [ngClass]="alertMessage.cssClass" role="alert">
+      {{ alertMessage.message }}
+    </div>
+  </div>
+  <div class="col-md-4"></div>
+</div>
